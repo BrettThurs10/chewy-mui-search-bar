@@ -26,14 +26,18 @@ export const SearchBar = (props: SearchBarProps) => {
           freeSolo
           options={top10movies.map((option) => option.title)}
           renderInput={(params) => (
-            <OutlinedInput
-              {...params}
-              startAdornment={
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              }
-            />
+            <>
+              <InputLabel>{props.label}</InputLabel>
+              <OutlinedInput
+                {...params}
+                label={props.label}
+                startAdornment={
+                  <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>
+                }
+              />
+            </>
           )}
         />
       </FormControl>

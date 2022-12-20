@@ -12,5 +12,11 @@ export const Primary = Template.bind({});
 
 Primary.args = {
   primary: true,
+};
+
+export const WithLabel = Template.bind({});
+
+WithLabel.args = {
+  primary: true,
   label: "Primary",
 };

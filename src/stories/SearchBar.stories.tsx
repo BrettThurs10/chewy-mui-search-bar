@@ -1,3 +1,4 @@
+import { ArrowCircleRight } from "@mui/icons-material";
 import { Meta, Story } from "@storybook/react";
 import { SearchBar, SearchBarProps } from "../components/SearchBar/SearchBar";
 
@@ -19,4 +20,11 @@ export const WithLabel = Template.bind({});
 WithLabel.args = {
   primary: true,
   label: "Primary",
+};
+
+export const WithCustomSearchIcon = Template.bind({});
+
+WithCustomSearchIcon.args = {
+  primary: true,
+  searchIcon: <ArrowCircleRight />,
 };

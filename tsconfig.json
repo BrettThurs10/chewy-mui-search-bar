@@ -19,6 +19,9 @@
     "noImplicitThis": true,
     "strictNullChecks": true
   },
+  "paths": {
+    "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+  },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

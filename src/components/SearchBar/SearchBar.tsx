@@ -17,9 +17,10 @@ import FilledInput from "@mui/material/FilledInput";
 export type SearchBarProps = AutocompleteProps & {
   test: string;
   searchIcon?: React.ReactNode;
+  startIcon?: boolean;
 };
 export const SearchBar = (props: SearchBarProps) => {
-  const { searchIcon = <SearchIcon /> } = props;
+  const { searchIcon = <SearchIcon />, startIcon = true } = props;
   return (
     <>
       <FormControl fullWidth>
@@ -34,7 +35,8 @@ export const SearchBar = (props: SearchBarProps) => {
                 label={props.label} // shows no label if no label prop is passed
                 InputProps={{
                   ...params.InputProps, // InputProps attribute is overriding the InputProps parameter of params. You have to merge InputProps property of params
-                  startAdornment: searchIcon,
+                  startAdornment: startIcon && searchIcon,
+                  endAdornment: !startIcon && searchIcon,
                 }}
               />
             </>

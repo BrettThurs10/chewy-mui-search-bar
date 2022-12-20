@@ -28,3 +28,10 @@ WithCustomSearchIcon.args = {
   primary: true,
   searchIcon: <ArrowCircleRight />,
 };
+
+export const WithEndSearchIcon = Template.bind({});
+
+WithEndSearchIcon.args = {
+  primary: true,
+  startIcon: false,
+};
